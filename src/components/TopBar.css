@@ -1,0 +1,103 @@
+.topbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  gap: 15px;
+  animation: slideDownTopBar 0.6s ease-out;
+}
+
+@keyframes slideDownTopBar {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.topbar-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff4da6;
+  background: linear-gradient(45deg, rgba(255, 77, 166, 0.1), rgba(184, 51, 255, 0.1));
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(255, 77, 166, 0.3);
+}
+
+.topbar-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, rgba(255, 77, 166, 0.2), rgba(184, 51, 255, 0.2));
+  box-shadow: 0 12px 30px rgba(255, 77, 166, 0.5);
+}
+
+.topbar-button:active {
+  transform: scale(0.95);
+}
+
+.music-btn.playing {
+  animation: musicPulse 0.6s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(255, 77, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(255, 77, 166, 0.7);
+  }
+}
+
+.settings-btn {
+  animation: settingsRotate 0.3s ease-out;
+}
+
+.settings-btn:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: scale(1.1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+@keyframes settingsRotate {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    top: 10px;
+    right: 10px;
+    gap: 10px;
+  }
+
+  .topbar-button {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}

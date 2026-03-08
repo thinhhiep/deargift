@@ -1,0 +1,39 @@
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heart {
+  position: fixed;
+  font-size: 32px;
+  opacity: 0.7;
+  animation: float 8s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(255, 77, 166, 0.5));
+}
+
+.heart:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 15px rgba(255, 77, 166, 0.9));
+}
+
+@keyframes float {
+  from {
+    bottom: -50px;
+    opacity: 0.8;
+    transform: translateX(0) rotate(0deg);
+  }
+  to {
+    bottom: 110vh;
+    opacity: 0;
+    transform: translateX(100px) rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .heart {
+    font-size: 24px;
+  }
+}
