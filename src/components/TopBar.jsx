@@ -22,7 +22,7 @@ export default function TopBar({ onSettingsClick }) {
     <div className="topbar">
       <audio
         ref={audioRef}
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        src="/audio/bg.mp3"
         onEnded={handleAudioEnd}
         loop
       />

@@ -107,7 +107,10 @@
   color: #ff4da6;
   margin: 0;
   font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
 }
 
 .letter-body {
@@ -122,12 +125,14 @@
 
 .letter-text {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 2;
   color: #333;
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Lora', 'Georgia', serif;
+  font-weight: 400;
   white-space: pre-wrap;
   word-break: break-word;
+  letter-spacing: 0.5px;
 }
 
 .letter-footer {
@@ -178,7 +183,8 @@
   }
 
   .letter-text {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.9;
   }
 
   .modal-close {
@@ -196,10 +202,12 @@
 
   .letter-header h2 {
     font-size: 20px;
+    letter-spacing: 0.5px;
   }
 
   .letter-text {
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
   }
 }
